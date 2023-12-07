@@ -10,5 +10,5 @@ export default function Home() {
     router.push("/list-video");
   }, []);
 
-  return <div>home</div>;
+  return <></>;
 }

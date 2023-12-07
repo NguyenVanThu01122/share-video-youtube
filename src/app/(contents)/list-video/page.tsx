@@ -31,8 +31,8 @@ export default async function ListVideoServer({
 
   return (
     <ListVideoClient
-      videos={res.data.data || []} // nếu res.data.data k có giá trị thì videos sẽ nhận giá trị mảng rỗng
-      total={res.data.total || 0}
+      videos={res.data?.data || []} // nếu res.data.data k có giá trị thì videos sẽ nhận giá trị mảng rỗng
+      total={res.data?.total || 0}
       page={currentPage}
     />
   );

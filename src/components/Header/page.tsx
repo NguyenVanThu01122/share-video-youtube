@@ -29,7 +29,7 @@ const Header = () => {
 
   const router = useRouter();
   const dispatch = useDispatch();
-  const queryClient = useQueryClient();
+  // const queryClient = useQueryClient();
 
   useQuery(["getUser", login], getInfoUser, {
     enabled: login, //Query chỉ sẽ được tự động thực hiện khi login khác null hoặc undefined. Nếu login có giá trị, query sẽ tự động được kích hoạt.

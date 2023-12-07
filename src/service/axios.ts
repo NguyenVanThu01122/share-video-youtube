@@ -9,8 +9,7 @@ export const instantAxios = axios.create({
 // Interceptor để thêm token vào trường header của mỗi request
 instantAxios.interceptors.request.use(
   (config) => {
-    // Lấy token từ nơi lưu trữ nó (ví dụ: localStorage)
-    const token = getLocalStorage("token");
+    const token = getLocalStorage("token"); // Lấy token từ nơi lưu trữ nó (ví dụ: localStorage)
     // Nếu có token, thêm vào trường Authorization của header
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -25,7 +24,7 @@ instantAxios.interceptors.request.use(
 instantAxios.interceptors.response.use(
   (data) => data,
   (error) => {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       removeLocalStorage("token");
       window.location.assign("/login");
     }

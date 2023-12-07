@@ -23,7 +23,7 @@ function DetailVideoPage({ detail, id }: { detail: any; id: string }) {
   const router = useRouter();
   const [comment, setComment] = useState("");
   const login = useSelector((state: any) => state.app?.isLogin);
-  const queryClient = useQueryClient();
+  // const queryClient = useQueryClient();
 
   // const { isLoading, isError } = useQuery(
   //   ["detailVideo", params.id],
